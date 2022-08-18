@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Openboard Clone</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div style="display: flex; justify-content: center; align-items: center">
+      <div class="toolbar">
+        <div class="tools active_tool" id="pencil">
+          <img src="images/Pencil.svg" alt="pencil" class="img" />
+        </div>
+        <div class="tool_options hide" id="penOptions">
+          <div class="tool-range">
+            <input
+              type="range"
+              min="2"
+              max="15"
+              value="3"
+              class="slider"
+              id="Pslider"
+            />
+          </div>
+          <div class="pencil_colors">
+            <div class="penColor black"></div>
+            <div class="penColor red"></div>
+            <div class="penColor blue"></div>
+          </div>
+        </div>
+        <div class="tools" id="eraser">
+          <img src="images/Eraser.svg" alt="Eraser" class="img" />
+        </div>
+        <div class="tool-range tool_options hide" id="eraserOptions">
+          <input
+            type="range"
+            min="2"
+            max="15"
+            value="3"
+            class="slider"
+            id="Eslider"
+          />
+        </div>
+        <div class="tools" id="notes">
+          <img src="images/notes.svg" alt="notes" class="img" />
+        </div>
+        <div class="tools" id="upload">
+          <img src="images/Upload.svg" alt="upload" class="img" />
+          <input type="file" id="photo-upload" />
+        </div>
+        <div class="tools" id="undo">
+          <img src="images/Undo.svg" alt="Undo" class="img" />
+        </div>
+        <div class="tools" id="redo">
+          <img src="images/Redo.svg" alt="redo" class="img" />
+        </div>
+        <div class="tools" id="download">
+          <img src="images/Download.svg" alt="Download" class="img" />
+        </div>
+      </div>
+    </div>
+
+    <canvas class="board"></canvas>
+
+    <!-- <div class="sticky">
+      <div class="notesHeader">
+        <div class="notesOptions" id="minimize"></div>
+        <div class="notesOptions" id="close"></div>
+      </div>
+      <div class="stickyContent">
+         <textarea name="" id="textBox" cols="30" rows="10"></textarea>
+      </div>
+    </div>  -->
+
+    <script src="tools.js"></script>
+    <script src="canvas.js"></script>
+    <script src="/run.js"></script>
+
+    <!-- <script
+      src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+      integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let socket = io.connect("http://localhost:3000");
+    </script>
+     -->
+    <!-- OR -->
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+    </script>
+  </body>
+</html>
