@@ -30,6 +30,7 @@ canvas.addEventListener("mousedown", function (e) {
   if (redoPoints.length) {
     redoPoints = []; //undo ke baad kuch likhne ke baad nye input krne pe naa aye purana
   }
+
   isMouseDown = true;
   let initialMouseX = e.clientX;
   let initialMouseY = e.clientY;
@@ -59,11 +60,17 @@ canvas.addEventListener("mousemove", function (e) {
     line.push(point);
 
     if (isMouseDown == true) {
+      // socket.emit("draw", { finalMouseX, finalMouseY });
       tool.lineTo(finalMouseX, finalMouseY);
       tool.stroke();
     }
   }
 });
+
+// socket.on("onDraw", ({ finalMouseX, finalMouseY }) => {
+//   tool.lineTo(finalMouseX, finalMouseY);
+//   tool.stroke();
+// });
 
 canvas.addEventListener("mouseup", function (e) {
   isMouseDown = false;

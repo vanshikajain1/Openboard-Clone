@@ -15,12 +15,18 @@ let server = app.listen(port, () => {
 });
 let io = socket(server); //connection establishment between frontend socket and server
 io.on('connection', (socket) => {
-    console.log("Connection Established");
+    console.log("User connected");
+// let connectons=[];
+    socket.on('draw' , (data)=>{
+     io.emit('onDraw' , {x:data.x , y: data.y})
+    });
 
     socket.on('disconnect', () => {
       console.log('User disconnected');
     });
   });
+
+  
 
 
 

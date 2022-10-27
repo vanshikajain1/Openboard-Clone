@@ -250,6 +250,46 @@ imageUpload.addEventListener("change", function () {
   img.classList.add("photo");
   let stickyContent = createSticky();
   stickyContent.appendChild(img); //stickyContent class me img add krdo
+
+  // stickyContent.addEventListener(
+  //   "click",
+  //   function init() {
+  //     stickyContent.removeEventListener("click", init, false);
+  //     stickyContent.className = stickyContent.className + " resizable";
+  //     var resizer = document.createElement("div");
+  //     resizer.className = "resizer";
+  //     stickyContent.appendChild(resizer);
+  //     resizer.addEventListener("mousedown", initDrag, false);
+  //   },
+  //   false
+  // );
+
+  // let startX, startY, startWidth, startHeight;
+
+  // function initDrag(e) {
+  //   startX = e.clientX;
+  //   startY = e.clientY;
+  //   startWidth = parseInt(
+  //     document.defaultView.getComputedStyle(stickyContent).width,
+  //     10
+  //   );
+  //   startHeight = parseInt(
+  //     document.defaultView.getComputedStyle(stickyContent).height,
+  //     10
+  //   );
+  //   document.documentElement.addEventListener("mousemove", doDrag, false);
+  //   document.documentElement.addEventListener("mouseup", stopDrag, false);
+  // }
+
+  // function doDrag(e) {
+  //   stickyContent.style.width = startWidth + e.clientX - startX + "px";
+  //   stickyContent.style.height = startHeight + e.clientY - startY + "px";
+  // }
+
+  // function stopDrag(e) {
+  //   document.documentElement.removeEventListener("mousemove", doDrag, false);
+  //   document.documentElement.removeEventListener("mouseup", stopDrag, false);
+  // }
 });
 
 let download = document.querySelector("#download");
@@ -259,7 +299,7 @@ download.addEventListener("click", function () {
   // aTag.setAttribute("href", "filePath"); //link uska filePath me hai
   // aTag.setAttribute("download", "canvas.png"); // image download ho canvas.jpeg naam se
   // aTag.click();
-  
+
   let url = canvas.toDataURL(); //default is png
   let a = document.createElement("a");
   a.href = url;

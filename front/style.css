@@ -25,6 +25,8 @@ body {
   height: 3.3rem;
   width: 40rem;
   position: relative;
+  cursor: pointer;
+  
   /* border-radius: 20%; */
   /* background-color: lightgray; */
 }
@@ -51,6 +53,7 @@ body {
   position: absolute;
   top: 5rem;
   left: 0rem;
+  cursor: pointer;
 }
 
 .tool-range {
@@ -119,12 +122,14 @@ body {
   align-items: center;
   height: 2rem;
   border-bottom: 1px solid lightgrey;
+  cursor: grab;
 }
 .notesOptions {
   height: 1rem;
   width: 1rem;
   margin-right: 0.3rem;
   border-radius: 50%;
+  
 }
 #minimize {
   background-color: green;
@@ -132,6 +137,7 @@ body {
   width: 1rem;
   margin-right: 0.3rem;
   border-radius: 50%;
+  cursor: default;
 }
 #close {
   background-color: red;
@@ -139,6 +145,7 @@ body {
   width: 1rem;
   margin-right: 0.3rem;
   border-radius: 50%;
+  cursor: default;
 }
 .stickyContent {
   background-color: rgb(238, 245, 247);
@@ -160,4 +167,18 @@ body {
   width: 100%;
   /* height: 100%; */
   object-fit: contain;
+}
+
+.resizable {
+  background: white;
+  position: relative;
+}
+.resizer {
+  width: 0.7rem;
+  height: 0.5rem;
+  /* background: blue; */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
 }
