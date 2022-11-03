@@ -9,7 +9,7 @@ app.use(express.static("front"));
 //     res.sendFile(__dirname + '/index.html');
 //   });
   
-let port = 3000; // end point for to and fro movement of dataflow
+let port = process.env.PORT || 3000; // end point for to and fro movement of dataflow
 let server = app.listen(port, () => {
   console.log("Listning to port " + port);
 });
