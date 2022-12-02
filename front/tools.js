@@ -106,8 +106,8 @@ for (let i = 0; i < penColors.length; i++) {
   });
 }
 
-let pointsDb = []; //isme sb lines ke collected objects hai
 let line = []; //ye ek object hai jisme saare points hai; md mm mm mm mu
+let pointsDb = []; //isme sb lines ke collected objects hai
 let redoPoints = [];
 
 undo.addEventListener("click", function () {

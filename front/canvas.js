@@ -1,6 +1,6 @@
 //alert("Js Ran");
 let canvas = document.querySelector(".board");
-// //draw rect
+// draw rect
 let tool = canvas.getContext("2d"); //get browser tool to draw
 
 // tool.fillStyle = "yellow";
